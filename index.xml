@@ -32,19 +32,19 @@
  &lt;td>&lt;code>type&lt;/code> &lt;em>&lt;a href="https://kubefleet.dev/docs/api-reference/cluster.kubernetes-fleet.io/v1/#agenttype">AgentType&lt;/a>&lt;/em>&lt;/td>
  &lt;td>Type of the member agent.&lt;/td>
  &lt;td>&lt;/td>
- &lt;td>&lt;/td>
+ &lt;td>Required: {} &lt;br />&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>&lt;code>conditions&lt;/code> &lt;em>&lt;a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.31/#condition-v1-meta">Condition&lt;/a> array&lt;/em>&lt;/td>
  &lt;td>Conditions is an array of current observed conditions for the member agent.&lt;/td>
  &lt;td>&lt;/td>
- &lt;td>&lt;/td>
+ &lt;td>Optional: {} &lt;br />&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>&lt;code>lastReceivedHeartbeat&lt;/code> &lt;em>&lt;a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.31/#time-v1-meta">Time&lt;/a>&lt;/em>&lt;/td>
  &lt;td>Last time we received a heartbeat from the member agent.&lt;/td>
  &lt;td>&lt;/td>
- &lt;td>&lt;/td>
+ &lt;td>Optional: {} &lt;br />&lt;/td>
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
@@ -116,19 +116,19 @@ the outbound network and no inbound network access.&lt;/p></description></item><
  &lt;td>&lt;code>type&lt;/code> &lt;em>&lt;a href="https://kubefleet.dev/docs/api-reference/cluster.kubernetes-fleet.io/v1beta1/#agenttype">AgentType&lt;/a>&lt;/em>&lt;/td>
  &lt;td>Type of the member agent.&lt;/td>
  &lt;td>&lt;/td>
- &lt;td>&lt;/td>
+ &lt;td>Required: {} &lt;br />&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>&lt;code>conditions&lt;/code> &lt;em>&lt;a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.31/#condition-v1-meta">Condition&lt;/a> array&lt;/em>&lt;/td>
  &lt;td>Conditions is an array of current observed conditions for the member agent.&lt;/td>
  &lt;td>&lt;/td>
- &lt;td>&lt;/td>
+ &lt;td>Optional: {} &lt;br />&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>&lt;code>lastReceivedHeartbeat&lt;/code> &lt;em>&lt;a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.31/#time-v1-meta">Time&lt;/a>&lt;/em>&lt;/td>
  &lt;td>Last time we received a heartbeat from the member agent.&lt;/td>
  &lt;td>&lt;/td>
- &lt;td>&lt;/td>
+ &lt;td>Optional: {} &lt;br />&lt;/td>
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
@@ -196,19 +196,13 @@ Before creating a ResourcePlacement:&lt;/p></description></item><item><title>Sch
 &lt;li>When the placement resource selector selects a reserved namespace.&lt;/li>
 &lt;/ul>
 &lt;blockquote>
-&lt;p>Note: When the placement policy is set to &lt;code>PickAll&lt;/code>, the &lt;code>ClusterResourcePlacementScheduled&lt;/code> or &lt;code>ResourcePlacementScheduled&lt;/code> condition is always set to &lt;code>True&lt;/code>.&lt;/p></description></item><item><title>Getting started with Fleet using KinD clusters</title><link>https://kubefleet.dev/docs/getting-started/kind/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kubefleet.dev/docs/getting-started/kind/</guid><description>&lt;p>In this tutorial, you will try Fleet out using
-&lt;a href="https://kind.sigs.k8s.io/">KinD&lt;/a> clusters, which are Kubernetes clusters running on your own
-local machine via &lt;a href="https://docker.com">Docker&lt;/a> containers. This is the easiest way
-to get started with Fleet, which can help you understand how Fleet simiplify the day-to-day multi-cluster management experience with very little setup needed.&lt;/p>
-&lt;blockquote>
-&lt;p>Note&lt;/p>
-&lt;p>kind is a tool for setting up a Kubernetes environment for experimental purposes;
-some instructions below for running Fleet in the kind environment may not apply to other
-environments, and there might also be some minor differences in the Fleet
-experience.&lt;/p></description></item><item><title>KubeFleet and ArgoCD Integration</title><link>https://kubefleet.dev/docs/tutorials/argocd/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kubefleet.dev/docs/tutorials/argocd/</guid><description>&lt;p>This hands-on guide of KubeFleet and ArgoCD integration shows how these powerful tools work in concert to revolutionize multi-cluster application management.
+&lt;p>Note: When the placement policy is set to &lt;code>PickAll&lt;/code>, the &lt;code>ClusterResourcePlacementScheduled&lt;/code> or &lt;code>ResourcePlacementScheduled&lt;/code> condition is always set to &lt;code>True&lt;/code>.&lt;/p></description></item><item><title>KubeFleet and ArgoCD Integration</title><link>https://kubefleet.dev/docs/tutorials/argocd/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kubefleet.dev/docs/tutorials/argocd/</guid><description>&lt;p>This hands-on guide of KubeFleet and ArgoCD integration shows how these powerful tools work in concert to revolutionize multi-cluster application management.
 Discover how KubeFleet&amp;rsquo;s intelligent orchestration capabilities complement ArgoCD&amp;rsquo;s popular GitOps approach, enabling seamless deployments across diverse environments while maintaining consistency and control.
 This tutorial illuminates practical strategies for targeted deployments, environment-specific configurations, and safe, controlled rollouts.
-Follow along to transform your multi-cluster challenges into streamlined, automated workflows that enhance both developer productivity and operational reliability.&lt;/p></description></item><item><title>placement.kubernetes-fleet.io/v1</title><link>https://kubefleet.dev/docs/api-reference/placement.kubernetes-fleet.io/v1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kubefleet.dev/docs/api-reference/placement.kubernetes-fleet.io/v1/</guid><description>&lt;h1 id="api-reference">API Reference&lt;/h1>
+Follow along to transform your multi-cluster challenges into streamlined, automated workflows that enhance both developer productivity and operational reliability.&lt;/p></description></item><item><title>KubeFleet quickstart using kind clusters</title><link>https://kubefleet.dev/docs/getting-started/kind/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kubefleet.dev/docs/getting-started/kind/</guid><description>&lt;p>In this tutorial, you deploy KubeFleet on &lt;a href="https://kind.sigs.k8s.io/">kind&lt;/a> clusters, which are Kubernetes clusters running locally via &lt;a href="https://docker.com/">Docker&lt;/a>.&lt;/p>
+&lt;p>We&amp;rsquo;ll help you understand KubeFleet&amp;rsquo;s key architectural components, and introduce the custom resources and processes you can use for day-to-day multi-cluster management experience with very little setup needed.&lt;/p>
+&lt;blockquote>
+&lt;p>Note: kind is a tool for setting up a Kubernetes environment for experimental purposes; Some instructions for running KubeFleet on kind clusters may not apply to other environments, and there might also be some minor differences in the KubeFleet experience.&lt;/p></description></item><item><title>placement.kubernetes-fleet.io/v1</title><link>https://kubefleet.dev/docs/api-reference/placement.kubernetes-fleet.io/v1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kubefleet.dev/docs/api-reference/placement.kubernetes-fleet.io/v1/</guid><description>&lt;h1 id="api-reference">API Reference&lt;/h1>
 &lt;h2 id="packages">Packages&lt;/h2>
 &lt;ul>
 &lt;li>&lt;a href="https://kubefleet.dev/docs/api-reference/placement.kubernetes-fleet.io/v1/#placementkubernetes-fleetiov1">placement.kubernetes-fleet.io/v1&lt;/a>&lt;/li>
@@ -218,14 +212,24 @@ Follow along to transform your multi-cluster challenges into streamlined, automa
 &lt;ul>
 &lt;li>&lt;a href="https://kubefleet.dev/docs/api-reference/placement.kubernetes-fleet.io/v1/#appliedwork">AppliedWork&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://kubefleet.dev/docs/api-reference/placement.kubernetes-fleet.io/v1/#appliedworklist">AppliedWorkList&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://kubefleet.dev/docs/api-reference/placement.kubernetes-fleet.io/v1/#approvalrequest">ApprovalRequest&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://kubefleet.dev/docs/api-reference/placement.kubernetes-fleet.io/v1/#clusterapprovalrequest">ClusterApprovalRequest&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://kubefleet.dev/docs/api-reference/placement.kubernetes-fleet.io/v1/#clusterresourcebinding">ClusterResourceBinding&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://kubefleet.dev/docs/api-reference/placement.kubernetes-fleet.io/v1/#clusterresourceoverride">ClusterResourceOverride&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://kubefleet.dev/docs/api-reference/placement.kubernetes-fleet.io/v1/#clusterresourceoverridesnapshot">ClusterResourceOverrideSnapshot&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://kubefleet.dev/docs/api-reference/placement.kubernetes-fleet.io/v1/#clusterresourceplacement">ClusterResourcePlacement&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://kubefleet.dev/docs/api-reference/placement.kubernetes-fleet.io/v1/#clusterresourceplacementstatus">ClusterResourcePlacementStatus&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://kubefleet.dev/docs/api-reference/placement.kubernetes-fleet.io/v1/#clusterresourceplacementstatuslist">ClusterResourcePlacementStatusList&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://kubefleet.dev/docs/api-reference/placement.kubernetes-fleet.io/v1/#clusterresourcesnapshot">ClusterResourceSnapshot&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://kubefleet.dev/docs/api-reference/placement.kubernetes-fleet.io/v1/#clusterschedulingpolicysnapshot">ClusterSchedulingPolicySnapshot&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://kubefleet.dev/docs/api-reference/placement.kubernetes-fleet.io/v1/#clusterstagedupdaterun">ClusterStagedUpdateRun&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://kubefleet.dev/docs/api-reference/placement.kubernetes-fleet.io/v1/#clusterstagedupdatestrategy">ClusterStagedUpdateStrategy&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://kubefleet.dev/docs/api-reference/placement.kubernetes-fleet.io/v1/#resourceoverride">ResourceOverride&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://kubefleet.dev/docs/api-reference/placement.kubernetes-fleet.io/v1/#resourceoverridesnapshot">ResourceOverrideSnapshot&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://kubefleet.dev/docs/api-reference/placement.kubernetes-fleet.io/v1/#resourceplacement">ResourcePlacement&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://kubefleet.dev/docs/api-reference/placement.kubernetes-fleet.io/v1/#resourceplacementlist">ResourcePlacementList&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://kubefleet.dev/docs/api-reference/placement.kubernetes-fleet.io/v1/#stagedupdaterun">StagedUpdateRun&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://kubefleet.dev/docs/api-reference/placement.kubernetes-fleet.io/v1/#stagedupdatestrategy">StagedUpdateStrategy&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://kubefleet.dev/docs/api-reference/placement.kubernetes-fleet.io/v1/#work">Work&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://kubefleet.dev/docs/api-reference/placement.kubernetes-fleet.io/v1/#worklist">WorkList&lt;/a>&lt;/li>
 &lt;/ul>
@@ -249,7 +253,7 @@ Follow along to transform your multi-cluster challenges into streamlined, automa
  &lt;td>&lt;code>clusterAffinity&lt;/code> &lt;em>&lt;a href="https://kubefleet.dev/docs/api-reference/placement.kubernetes-fleet.io/v1/#clusteraffinity">ClusterAffinity&lt;/a>&lt;/em>&lt;/td>
  &lt;td>ClusterAffinity contains cluster affinity scheduling rules for the selected resources.&lt;/td>
  &lt;td>&lt;/td>
- &lt;td>&lt;/td>
+ &lt;td>Optional: {} &lt;br />&lt;/td>
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
